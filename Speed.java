@@ -94,7 +94,7 @@ public class Speed extends JFrame{
         titlePanel.setLayout( null );
         titlePanel.setVisible(true);
 
-        startBtn.setBounds(250, 200, 100, 50);
+        startBtn.setBounds(250, 200, 150, 50);
         startBtn.setFont(f3);
         startBtn.setFocusable(false);
         startBtn.addActionListener(new ButtonListener());
@@ -134,11 +134,11 @@ public class Speed extends JFrame{
 
         Double[] d = {0.25, 0.5, 0.75, 1.0};
         cb = new JComboBox<Double>(d);
-        cb.setBounds(100, 200, 75, 20);
-        cb.setSelectedItem(0.75);
+        cb.setBounds(100, 200, 100, 20);
+        cb.setSelectedItem(1.0);
         titlePanel.add(cb);
 
-        titleLbl.setBounds(80, 100, 450, 50);
+        titleLbl.setBounds(80, 100, 500, 50);
         titleLbl.setVerticalAlignment(SwingConstants.TOP);
         titlePanel.add(titleLbl);
 
@@ -302,7 +302,7 @@ public class Speed extends JFrame{
         @Override
         public void mouseDragged( MouseEvent e ){
             Card c = (Card) e.getComponent();
-            c.setLocation(e.getLocationOnScreen().x-35, e.getLocationOnScreen().y-70);
+            c.setLocation(e.getLocationOnScreen().x-30, e.getLocationOnScreen().y-75);
         }
         public void mouseReleased( MouseEvent e ){
             Card c = (Card) e.getComponent();
